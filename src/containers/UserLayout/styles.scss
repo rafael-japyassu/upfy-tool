@@ -1,0 +1,119 @@
+@import "../../assets/scss/main";
+
+.user-layout {
+    height: 100vh;
+    width: 100vw;
+    background: url("../../assets/images/background-login.svg");
+    background-size: cover;
+}
+
+.user-layout .container-user-layout {
+    height: calc(100% - 55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-layout h1 {
+    padding: 15px;
+    height: 40px;
+    color: $color-primary;
+}
+
+.card-login {
+    width: 400px;
+    height: auto;
+    border-radius: 17px;
+    background: #fff;
+    border: 1px solid $color-primary;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+}
+
+.card-login .card-logo {
+    margin-top: 20px;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login .card-logo img {
+    height: 100px;
+    border-radius: 22px;
+    border: 1px solid $color-primary;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-login .input-login {
+    width: 100%;
+    height: 42px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid #707070;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: $color-primary;
+    margin-bottom: 30px;
+}
+
+.card-login label {
+    margin-bottom: 10px;
+    color: $color-primary;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-login button {
+    cursor: pointer;
+    width: 100%;
+    height: 42px;
+    border-radius: 15px;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.card-login button:hover {
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    background-color: #fff;
+}
+
+.card-login .input-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid #707070;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: $color-primary;
+    margin-bottom: 30px;
+}
+
+.input-icon input {
+    width: 100%;
+    margin-left: 15px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 15px 0px 15px 0px;
+    color: $color-primary;
+    font-size: 16px;
+}

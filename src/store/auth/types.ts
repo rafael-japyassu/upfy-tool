@@ -16,7 +16,7 @@ export const AUTH_LOGGED = 'AUTH_LOGGED';
 
 interface LoginAction {
   type: typeof AUTH_LOGIN;
-  payload: Auth;
+  payload: AuthState;
 }
 
 interface LogoutAction {

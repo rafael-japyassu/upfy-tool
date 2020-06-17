@@ -7,7 +7,7 @@ import { store } from 'react-notifications-component';
 
 import { login } from '../../../store/auth/actions';
 
-import logo from '../../../assets/images/upfy.png';
+import logo from '../../../assets/images/logo.png';
 import api from '../../../services/api';
 
 const Login: React.FC = () => {

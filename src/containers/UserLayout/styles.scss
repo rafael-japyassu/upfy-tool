@@ -8,7 +8,7 @@
 }
 
 .user-layout .container-user-layout {
-    height: calc(100% - 55px);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,15 +21,17 @@
 }
 
 .card-login {
-    width: 400px;
-    height: auto;
+    width: 360px;
+    height: 430px;
     border-radius: 17px;
     background: #fff;
-    border: 1px solid $color-primary;
+    border: 1px solid #f5f5f5;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
     display: flex;
     flex-direction: column;
     padding: 0px 20px 0px 20px;
+    opacity: 1;
+
 }
 
 .card-login .card-logo {
@@ -43,7 +45,7 @@
 .card-login .card-logo img {
     height: 100px;
     border-radius: 22px;
-    border: 1px solid $color-primary;
+    border: 1px solid #f5f5f5;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -86,9 +88,9 @@
 }
 
 .card-login button:hover {
-    color: $color-primary;
-    border: 2px solid $color-primary;
-    background-color: #fff;
+    color: #fff;
+    border: 2px solid $color-secondary;
+    background-color: $color-secondary;
 }
 
 .card-login .input-icon {

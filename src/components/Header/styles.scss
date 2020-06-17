@@ -1,0 +1,81 @@
+@import "../../assets/scss/main.scss";
+
+#header-app {
+    height: 80px;
+    background-color: transparent;
+    color: $color-default;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    // box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+#header-app .nav-actions {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-actions ul {
+    // background-color: blue;
+    list-style: none;
+    display: flex;
+    height: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.nav-actions .nav-profile {
+    padding-left: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-profile img {
+    height: 42px;
+}
+
+.nav-profile span {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-actions .menu-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    // border: 1px solid #fff;
+    // background-color: #000;
+    min-width: 130px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu-item .menu-hover {
+    opacity: 0;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #fff;
+    background-color: $color-default;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    font-size: 20px;
+    .menu-hover {
+        opacity: 1;
+    }
+}

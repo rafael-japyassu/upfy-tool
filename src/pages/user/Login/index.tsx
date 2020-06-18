@@ -9,10 +9,12 @@ import { login } from '../../../store/auth/actions';
 
 import logo from '../../../assets/images/logo.png';
 import api from '../../../services/api';
+import { useHistory } from 'react-router-dom';
 
 const Login: React.FC = () => {
 
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const [userModel, setUserModel] = useState<Auth>({
     email: '',
@@ -30,9 +32,9 @@ const Login: React.FC = () => {
     e.preventDefault();
 
     api.post<AuthState>('/session', userModel).then(response => {
-      
       dispatch(login(response.data));
-
+      history.push('/inicio');
+      
     }).catch(error => {
       if (error.response === undefined) {
         store.addNotification({

@@ -1,0 +1,103 @@
+@import "../../../assets/scss/main.scss";
+
+main .folder-page {
+    height: 100%;
+    width: 100%;
+    // background-color: #fff;
+}
+
+.folder-header {
+    background-color: rgba(255,255,255, 0.9);
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    h2 {
+        margin-left: 10px;
+        color: $color-secondary;
+    }
+}
+
+.btn {
+    height: 42px;
+    width: 150px;
+    outline: nonde;
+    background-color: $color-primary;
+    color: $color-default;
+    border: none;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: $color-secondary;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.cards-foler {
+    height: auto;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.9);
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    object-fit: cover;
+}
+
+.folder-page .folder-container {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-folder {
+    width: 170px;
+    height: 170px;
+    border: 1px solid $color-secondary;
+    border-radius: 27px;
+    background-color: $color-primary;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 10px;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.card-folder:hover {
+    cursor: pointer;
+    width: 175px;
+    height: 175px;
+}
+
+.card-folder .folder-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-default;
+}
+
+.folder-body .folder-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+.folder-body .folder-icon {
+    margin-top: 30px;
+}

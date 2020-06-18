@@ -1,4 +1,4 @@
-import { AuthActionsType, AUTH_LOGIN, AuthState } from './types';
+import { AuthActionsType, AUTH_LOGIN, AuthState, AUTH_LOGOUT } from './types';
 
 export function login(auth: AuthState): AuthActionsType {
 
@@ -8,5 +8,15 @@ export function login(auth: AuthState): AuthActionsType {
   return {
     type: AUTH_LOGIN,
     payload: auth
+  };
+}
+
+export function logout(): AuthActionsType {
+
+  localStorage.setItem('user_id', '');
+  localStorage.setItem('user_token', '');
+
+  return {
+    type: AUTH_LOGOUT
   };
 }

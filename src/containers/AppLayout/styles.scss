@@ -6,3 +6,9 @@
     background: url("../../assets/images/background-app.svg");
     background-size: cover;
 }
+
+.app-layout .main-content {
+    height: calc(100% - 80px);
+    width: 100%;
+    padding: 20px;
+}

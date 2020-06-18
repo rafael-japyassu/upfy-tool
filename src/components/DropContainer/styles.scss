@@ -1,0 +1,21 @@
+@import "../../assets/scss/main.scss";
+
+.drop-container {
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transform: height 0.2s ease;
+}
+
+.drag-active {
+    border-color: $color-success;
+}
+
+.drag-reject {
+    border-color: $color-danger;
+}
+
+.drop-container:focus {
+    outline: none;
+}

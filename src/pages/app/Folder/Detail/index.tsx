@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReply, faTimes, faSave, faFolder } from '@fortawesome/free-solid-svg-icons'
+import { faReply, faTimes, faSave, faFolder, faTrash, faFile } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.scss';
 import { useHistory, useParams } from 'react-router-dom';
@@ -41,8 +41,8 @@ const FolderDetail: React.FC = () => {
 
     try {
 
-      await api.post('folders', folder);
-      notification("Sucesso", "Pasta criada com sucesso!", "success");
+      await api.put(`/folders/${id}`, folder);
+      notification("Sucesso", "Pasta atualizada com sucesso!", "success");
       back();
 
     } catch(error) {
@@ -63,8 +63,8 @@ const FolderDetail: React.FC = () => {
   return(
     <div className="folder-page">
       <div className="folder-header">
-        <h2>Pasta{ ' > ' + folder.name }</h2>
-        <button className="btn" onClick={back}>
+        <h2>Pasta{ ' > ' + folderDetail?.name }</h2>
+        <button className="btn btn-secondary" onClick={back}>
           <FontAwesomeIcon icon={faReply} size="lg" /> Voltar
         </button>
       </div>
@@ -79,32 +79,38 @@ const FolderDetail: React.FC = () => {
             </div>
             <div className="folder-detail">
               <span>Nome: <span className="folder-detail-data">{ folderDetail?.name }</span></span>
-              <span>Data de Cadastro: <span className="folder-detail-data">{ moment(folderDetail?.createdAt).format('DD/MM/yyyy') }</span></span>
+              <span>Criada em: <span className="folder-detail-data">{ moment(folderDetail?.createdAt).format('DD/MM/yyyy') }</span></span>
               <span>Ultima Atualização: <span className="folder-detail-data">{ moment(folderDetail?.updatedAt).format('DD/MM/yyyy') }</span></span>
             </div>
           </div>
+          <div className="card-actions-detail">
+            <button className="btn btn-danger" onClick={back}>
+              <FontAwesomeIcon icon={faTrash} /> Deletar Pasta
+            </button>{' '}
+            <button className="btn btn-info" onClick={back}>
+              <FontAwesomeIcon icon={faFile} /> Exibir arquivos
+            </button>
+          </div>
         </div>
 
-        <div className="card">
+        <div className="card-folder-form ">
           <div className="card-title">
             <h3>Dados do formulário</h3>
           </div>
-          <form onSubmit={onSubmit}>
-            <div className="card-body">
-              <label>Nome da Pasta</label>
-              <input 
-                type="text" 
-                required 
-                value={folder.name} 
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setFolder({ name: e.target.value })}
-                maxLength={30}
-              />
-            </div>
+          <form onSubmit={onSubmit} className="card-body">
+            <label>Nome da Pasta</label>
+            <input 
+              type="text" 
+              required 
+              value={folder.name} 
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setFolder({ name: e.target.value })}
+              maxLength={30}
+            />
             <div className="card-actions">
-              <button className="btn" type="submit">
+              <button className="btn btn-primary" type="submit">
                 <FontAwesomeIcon icon={faSave} /> Salvar
               </button>{' '}
-              <button className="btn btn-cancel" type="button" onClick={back}>
+              <button className="btn btn-default" type="button" onClick={back}>
                 <FontAwesomeIcon icon={faTimes} /> Cancelar
               </button>
             </div>

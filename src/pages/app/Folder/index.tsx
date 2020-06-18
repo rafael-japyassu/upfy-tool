@@ -7,11 +7,14 @@ import './styles.scss';
 import api from '../../../services/api';
 import { IFolderList } from '../../../interfaces/folder';
 import { notification } from '../../../helpers/alerts';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../../store/auth/actions';
 
 const Folder: React.FC = () => {
 
   const history = useHistory();
   const [folders, setForlders] = useState<IFolderList[]>([]);
+  const dispatch = useDispatch();
   
   useEffect(() => {
 
@@ -22,6 +25,10 @@ const Folder: React.FC = () => {
       } catch(error) {
         if (error.response === undefined) {
           notification("Erro", "Falha no Servidor!", "danger");
+        } else if (error.response.status === 401) {
+          notification("Alerta", "Sessão finalizada!", "warning");
+          dispatch(logout());
+          history.push('/login');
         } else if (error.response.status === 404) {
           notification("Alerta", "Credenciais Inválidas!", "warning");
         } else if (error.response.status === 422) {
@@ -33,6 +40,7 @@ const Folder: React.FC = () => {
     }
 
     loadFolders();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function newFolder() {
@@ -48,7 +56,7 @@ const Folder: React.FC = () => {
     <div className="folder-page">
       <div className="folder-header">
         <h2>Minhas Pastas</h2>
-        <button className="btn" onClick={newFolder}>
+        <button className="btn btn-secondary" onClick={newFolder}>
           <FontAwesomeIcon icon={faFolderPlus} size="lg" /> Nova Pasta
         </button>
       </div>

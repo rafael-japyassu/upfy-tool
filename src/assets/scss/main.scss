@@ -1,3 +1,106 @@
 $color-primary: #FF4F5A;
-$color-secondary: #df444e;
+$color-primary-dark: #dd4650;
+
+$color-secondary: #303f9f;
+$color-secondary-dark: #2a378c;
+
 $color-default: #ECECEC;
+$color-default-dark: #dbdbdb;
+
+$color-success: #43a047;
+$color-success-dark: #3a893d;
+
+$color-info: #00acc1;
+$color-info-dark: #009eb3;
+
+$color-warning: #ffb300;
+$color-warning-dark: #e5a100;
+
+$color-danger: #c62828;
+$color-danger-dark: #ad1d1d;
+
+$color-dark: #000a12;
+$color-dark-dark: #000;
+
+.btn {
+    height: 42px;
+    width: 150px;
+    color: $color-default;
+    border: none;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: 0.3s;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $color-primary;
+}
+
+.btn-primary:hover {
+    background-color: $color-primary-dark;
+}
+
+.btn-secondary {
+    background-color: $color-secondary;
+}
+
+.btn-secondary:hover {
+    background-color: $color-secondary-dark;
+}
+
+.btn-default {
+    background-color: $color-default;
+    color: #000;
+}
+
+.btn-default:hover {
+    background-color: $color-default-dark;
+}
+
+.btn-success {
+    background-color: $color-success;
+}
+
+.btn-success:hover {
+    background-color: $color-success-dark;
+}
+
+.btn-info {
+    background-color: $color-info;
+}
+
+.btn-info:hover {
+    background-color: $color-info-dark;
+}
+
+.btn-warning {
+    background-color: $color-warning;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background-color: $color-warning-dark;
+}
+
+.btn-danger {
+    background-color: $color-danger;
+}
+
+.btn-danger:hover {
+    background-color: $color-danger-dark;
+}
+
+.btn-dark {
+    background-color: $color-dark;
+}
+
+.btn-dark:hover {
+    background-color: $color-dark-dark;
+}

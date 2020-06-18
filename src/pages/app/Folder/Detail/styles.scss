@@ -20,28 +20,8 @@ main .folder-page {
 
     h2 {
         margin-left: 10px;
-        color: $color-secondary;
+        color: $color-primary-dark;
     }
-}
-
-.btn {
-    height: 42px;
-    width: 150px;
-    outline: nonde;
-    background-color: $color-primary;
-    color: $color-default;
-    border: none;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-    transition: 0.3s;
-}
-
-.btn:hover {
-    cursor: pointer;
-    background-color: $color-secondary;
-}
-
-.btn:focus {
-    outline: none;
 }
 
 .folder-page .folder-container {
@@ -74,7 +54,7 @@ main .folder-page {
 .card-title h3 {
     text-align: center;
     font-size: 24px;
-    color: $color-secondary;
+    color: $color-primary-dark;
 }
 
 .card .card-body {
@@ -82,20 +62,19 @@ main .folder-page {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 10px 0;
+}
+
+.card-body .card-actions {
+    padding-top: 40px;
+}
+
+.card-actions-detail {
+    padding-bottom: 5px;
 }
 
 .card-body label {
     margin-bottom: 10px;
-}
-
-.btn-cancel {
-    background-color: $color-default;
-    color: #000;
-}
-
-.btn-cancel:hover {
-    background-color: #dbdada;
 }
 
 .card-body input {
@@ -125,7 +104,7 @@ main .folder-page {
 .card-title h3 {
     text-align: center;
     font-size: 24px;
-    color: $color-secondary;
+    color: $color-primary-dark;
 }
 
 .card-detail .card-title {
@@ -149,7 +128,7 @@ main .folder-page {
 }
 
 .folder-detail-img .folder-icon {
-    color: $color-secondary;
+    color: $color-primary-dark;
 }
 
 .card-detail-body .folder-detail {
@@ -167,5 +146,9 @@ main .folder-page {
 }
 
 .folder-detail-data {
-    color: $color-secondary;
+    color: $color-primary-dark;    
+}
+
+.card-folder-form {
+    margin: 5px;
 }

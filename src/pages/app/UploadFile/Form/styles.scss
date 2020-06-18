@@ -1,11 +1,11 @@
 @import "../../../../assets/scss/main.scss";
 
-main .folder-page {
+main .upload-file-page {
     height: 100%;
     width: 100%;
 }
 
-.folder-header {
+.upload-file-header {
     background-color: rgba(255,255,255, 0.9);
     border-radius: 10px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
@@ -23,7 +23,7 @@ main .folder-page {
     }
 }
 
-.card-folder-form {
+.card {
     height: auto;
     padding: 10px;
     width: 100%;
@@ -34,7 +34,7 @@ main .folder-page {
     flex-direction: column;
 }
 
-.card-folder-form .card-title {
+.card .card-title {
     width: 100%;
 }
 
@@ -44,11 +44,11 @@ main .folder-page {
     color: $color-primary-dark;
 }
 
-.card-folder-form .card-body {
+.card .card-body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px 0 20px 0;
 }
 
@@ -62,48 +62,62 @@ main .folder-page {
     outline: none;
 }
 
-.folder-page .folder-container {
+.upload-file-page .upload-file-container {
     width: 100%;
     padding-top: 40px;
     display: flex;
     flex-direction: row;
 }
 
-.card-folder {
-    width: 170px;
-    height: 170px;
-    border: 1px solid $color-primary-dark;
-    border-radius: 27px;
-    background-color: $color-primary;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-    padding: 10px;
-    transition: 0.3s;
-    margin: 10px;
-}
-
-.card-folder:hover {
-    cursor: pointer;
-    width: 175px;
-    height: 175px;
-}
-
-.card-folder .folder-body {
+.card-body .upload-form {
+    min-height: 170px;
+    width: 30%;
     height: 100%;
-    width: 100%;
+    // border: 1px solid black;
+    margin: 15px;
+}
+
+.card-body .upload-form-data {
+    width: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.upload-form-data input{
+    margin-bottom: 20px;
+}
+
+.select-field {
+    height: 34px;
+}
+
+.select-field:focus {
+    outline: none;
+}
+
+.upload-form .upload-data {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    color: $color-default;
 }
 
-.folder-body .folder-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    height: 25px;
+.upload-data img {
+    height: 70px;
+    border-radius: 10px;
 }
 
-.folder-body .folder-icon {
-    margin-top: 30px;
+.upload-data-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    
+}
+
+.upload-form span{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
 }
